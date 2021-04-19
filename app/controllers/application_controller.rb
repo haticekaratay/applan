@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
       !!session[:teacher_id]
     end
 
-    def current_user
+    def current_teacher
       Teacher.find(session[:teacher_id])
     end
   end
