@@ -18,6 +18,17 @@ class TeachersController < ApplicationController
     end
     
     post "/login" do
-        "in post login"
+        teacher = Teacher.find_by_username(params[:username])
+        if teacher && teacher.authenticate(params[:password])
+            session[:teacher_id] = teacher.id
+            redirect "/plans"
+        else
+            redirect "/login"
+        end
     end
+
+    get "/logout" do
+        session.clear
+    end
+
 end
