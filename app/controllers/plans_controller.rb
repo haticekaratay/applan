@@ -4,5 +4,10 @@ class PlansController < ApplicationController
         erb :"plans/index"
     end
 
-        
+    get "/plans/new" do
+        erb :"plans/new"
+    end
+
+    post "/plans" do
+    end
 end
