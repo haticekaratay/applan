@@ -39,8 +39,8 @@ table, th, td {
 <br>
 <form method="POST" action="/plans/<%= @plan.id %>">
     <input id="hidden" type="hidden" name="_method" value="delete">
-    <input type="submit" class= button value="delete lesson plan">
+    <input type="submit" class= button value="Delete Plan">
 </form>
 
-
+<a href="/plans/<%= @plan.id %>/edit" class="button"> Edit Plan </a>
 
