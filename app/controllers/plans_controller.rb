@@ -15,11 +15,16 @@ class PlansController < ApplicationController
             plan.title = "Missing title"
             plan.teacher = current_teacher
             plan.save
-            redirect "/plans"
+            redirect "/plans/#{plan.id}"
         end
         plan = Plan.new(params)
         plan.teacher = current_teacher
         plan.save
-        redirect "/plans"
+        redirect "/plans/#{plan.id}"
+    end
+
+    get "/plans/:id" do
+        @plan = Plan.find(params[:id])
+        erb :"plans/show"
     end
 end
