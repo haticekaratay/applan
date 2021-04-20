@@ -2,6 +2,6 @@
 <br>
 <ul>
 <% @plans.each do |plan| %>
-    <li><%= plan.title %></li>
+    <li><a href="plans/<%= plan.id %>"><%= plan.title %></a></li>
 <% end %>
 </ul>
