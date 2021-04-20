@@ -38,4 +38,10 @@ class PlansController < ApplicationController
         plan.update(params[:plan_hash])
         redirect "/plans/#{plan.id}"
     end
+
+    delete "/plans/:id" do
+        @plan = Plan.find(params[:id])
+        @plan.destroy
+        redirect "/plans"
+    end
 end
