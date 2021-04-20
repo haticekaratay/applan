@@ -27,4 +27,15 @@ class PlansController < ApplicationController
         @plan = Plan.find(params[:id])
         erb :"plans/show"
     end
+
+    get "/plans/:id/edit" do
+        @plan = Plan.find(params[:id])
+        erb :"plans/edit"
+    end
+
+    patch "/plans/:id" do
+        plan = Plan.find(params[:id])
+        plan.update(params[:plan_hash])
+        redirect "/plans/#{plan.id}"
+    end
 end

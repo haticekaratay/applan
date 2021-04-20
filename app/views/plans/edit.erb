@@ -1,0 +1,15 @@
+<h3>Edit your lesson plan here: </h3>
+<form method="POST" action="/plans/<%= @plan.id %>">
+    <input type="hidden" name="_method" value="patch">
+    <p>Lesson Title:<br>
+    <textarea name="plan_hash[title]" rows="5" cols="100"><%= @plan.title %></textarea><p>
+    <p>Lesson Objective(s):<br>
+    <textarea name="plan_hash[objective]"  rows="5" cols="100"><%= @plan.objective %></textarea></p>
+    <p>Lesson Standard(s):<br>
+    <textarea name="plan_hash[standard]"  rows="5" cols="100"><%= @plan.standard %></textarea></p>
+    <p>Lesson Description:<br>
+    <textarea name="plan_hash[description]"  rows="5" cols="100"><%= @plan.description %></textarea></p>
+    <p>Vocabulary:<br>
+    <textarea name="plan_hash[vocabulary]"  rows="5" cols="100"><%= @plan.vocabulary %></textarea></p>
+    <input type="submit" value="Update the plan">
+</form>
