@@ -9,5 +9,17 @@ class PlansController < ApplicationController
     end
 
     post "/plans" do
+        #raise params.inspect
+        if params[:title].empty?
+            plan = Plan.new(params)
+            plan.title = "Missing title"
+            plan.teacher = current_teacher
+            plan.save
+            redirect "/plans"
+        end
+        plan = Plan.new(params)
+        plan.teacher = current_teacher
+        plan.save
+        redirect "/plans"
     end
 end
