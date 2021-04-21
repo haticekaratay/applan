@@ -13,11 +13,37 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: #F9A08D;
+    background-color: #8DF9EE;
     color: #333;
     font-family: Sans-Serif;
     line-height: 18px;
+    margin: 0;
   }
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(248, 153, 153);
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: green;
+  color: white;
+}
+
+.topnav a.active {
+  float: left;
+  background-color: pink;
+  color: black;
+}
 
   .wrapper {
     background: #fff;

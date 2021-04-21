@@ -1,0 +1,7 @@
+<h1>ALL LESSON PLANS:</h1>
+<br>
+<ul>
+<% @plans.each do |plan| %>
+    <li><a href="plans/<%= plan.id %>"><%= plan.title %></a></li>
+<% end %>
+</ul>

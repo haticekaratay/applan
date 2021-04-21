@@ -1,0 +1,46 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+
+.button {
+  background-color: tomato;
+  border: none;
+  color: black;
+  padding: 10px 26px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+</style>
+<table style="width:100%">
+    <tr>
+        <th style="background-color:#F5B8B3">Title</th>
+        <td><%= @plan.title %></td>
+    </tr>
+        <th style="background-color:#F5B8B3">Objective(s)</th>
+        <td><%= @plan.objective %></td>
+    </tr>
+        <th style="background-color:#F5B8B3">Standard(s)</th>
+        <td><%= @plan.standard %></td>
+    </tr>
+        <th style="background-color:#F5B8B3">Description</th>
+        <td><%= @plan.description %></td>
+    </tr>
+        <th style="background-color:#F5B8B3">Vocabulary</th>
+        <td><%= @plan.vocabulary %></td>
+    </tr>
+        
+</table>
+<br>
+<form method="POST" action="/plans/<%= @plan.id %>">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" class= button value="Delete Plan">
+</form>
+
+<a href="/plans/<%= @plan.id %>/edit" class="button"> Edit Plan </a>
+

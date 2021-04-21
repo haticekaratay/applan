@@ -15,7 +15,21 @@
   </head>
   <body>
     <div class="wrapper">
-
+      <% if logged_in? %>
+      <nav class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/logout">Log out</a>
+        <a href="/plans/new">Create a New Plan</a>
+        <a href="/plans">All Plans</a>
+        </nav>
+        <% else %>
+         <nav class="topnav">
+         <a class="active" href="/">Home</a>
+         <a href="/signup">Sign up </a>
+         <a href="/login">Log in </a>
+         </nav>
+      <% end %>
+        <br>
         <%= yield %>
 
       <footer class="branding">
