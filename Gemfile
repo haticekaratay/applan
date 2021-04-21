@@ -11,6 +11,7 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem 'tux'
+gem 'dotenv', '~> 2.1', '>= 2.1.1'
 
 group :test do
   gem 'rspec'
