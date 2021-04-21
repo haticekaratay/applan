@@ -12,6 +12,7 @@ gem 'pry'
 gem 'bcrypt'
 gem 'tux'
 gem 'dotenv', '~> 2.1', '>= 2.1.1'
+gem 'sinatra-flash'
 
 group :test do
   gem 'rspec'
