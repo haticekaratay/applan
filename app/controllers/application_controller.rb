@@ -21,5 +21,10 @@ class ApplicationController < Sinatra::Base
     def current_teacher
       Teacher.find(session[:teacher_id])
     end
+
+    def redirect_if_not_logged_in?
+      redirect "/" if !logged_in?
+    end
+
   end
 end
