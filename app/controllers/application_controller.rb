@@ -10,6 +10,11 @@ class ApplicationController < Sinatra::Base
     register Sinatra::Flash
   end
   
+  not_found do
+    status 404
+    erb :error
+  end
+
   get "/" do
     erb :welcome
   end
