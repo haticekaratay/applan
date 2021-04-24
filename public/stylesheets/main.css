@@ -63,6 +63,11 @@
     color: white;
     padding: 14px 16px;
   }
+  div#success {
+    background-color: green;
+    color: white;
+    padding: 14px 16px;
+  }
 
   h1 {
     font-size: 36px;

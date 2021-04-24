@@ -35,7 +35,9 @@
         <% flash.each do |type,message|%>
           <% if type.to_s == "error"%>
             <div id="error"><%= message %></div>
-        <% end %>
+          <% else %>
+            <div id="success"><%= message %></div>
+          <% end %>
         <% end %>
         <br>
         <br>
