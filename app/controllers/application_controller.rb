@@ -32,5 +32,11 @@ class ApplicationController < Sinatra::Base
       redirect "/" if !logged_in?
     end
 
+    def redirect_if_not_authorized
+      if @plan.teacher != current_teacher
+        redirect "/plans"
+      end
+    end
+
   end
 end

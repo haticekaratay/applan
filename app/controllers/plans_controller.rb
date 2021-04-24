@@ -29,26 +29,27 @@ class PlansController < ApplicationController
     get "/plans/:id" do
         redirect_if_not_logged_in?
         @plan = Plan.find(params[:id])
+        redirect_if_not_authorized
         erb :"plans/show"
     end
     
 
     get "/plans/:id/edit" do
-        redirect_if_not_logged_in?
         @plan = Plan.find(params[:id])
+        redirect_if_not_authorized
         erb :"plans/edit"
     end
 
     patch "/plans/:id" do
-        redirect_if_not_logged_in?
-        plan = Plan.find(params[:id])
-        plan.update(params[:plan_hash])
-        redirect "/plans/#{plan.id}"
+        @plan = Plan.find(params[:id])
+        redirect_if_not_authorized
+        @plan.update(params[:plan_hash])
+        redirect "/plans/#{@plan.id}"
     end
 
     delete "/plans/:id" do
-        redirect_if_not_logged_in?
         @plan = Plan.find(params[:id])
+        redirect_if_not_authorized
         @plan.destroy
         redirect "/plans"
     end
