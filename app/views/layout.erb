@@ -30,6 +30,12 @@
          </nav>
       <% end %>
         <br>
+        <br>
+        <% flash.each do |type,message|%>
+        <%= message %>
+        <% end %>
+        <br>
+        <br>
         <%= yield %>
 
       <footer class="branding">
