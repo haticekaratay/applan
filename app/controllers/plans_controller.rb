@@ -1,7 +1,7 @@
 class PlansController < ApplicationController
     get "/plans" do
         redirect_if_not_logged_in?
-        @plans = Plan.all
+        @plans = Plan.where(teacher: current_teacher)
         erb :"plans/index"
     end
 
