@@ -5,14 +5,14 @@ class TeachersController < ApplicationController
     end
 
     post "/signup" do
-        if params[:username].empty? || params[:password].empty? || Teacher.find_by_username(params[:username])
+        teacher = Teacher.create(params)
+        if !teacher.valid?
             flash[:error] = "Invalid user input! Try again."
             redirect "/signup"
         end
-        teacher = Teacher.create(username: params[:username], password: params[:password])
-        session[:teacher_id] = teacher.id  #adds a new key value pair to session hash
+        session[:teacher_id] = teacher.id 
         flash[:success] = "User is succesfully created.Please log in to system."
-        redirect "/plans"   # this route will be created in controllers. 
+        redirect "/plans" 
     end
 
 
