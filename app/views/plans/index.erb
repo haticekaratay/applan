@@ -1,7 +1,11 @@
 <h1>ALL LESSON PLANS:</h1>
 <br>
 <ul>
-<% @plans.each do |plan| %>
-    <li><a href="plans/<%= plan.id %>"><%= plan.title %></a></li>
+<% if @plans.count == 0 %>
+    <h3>There is no lesson plan created yet. Let's <a href="/plans/new">create a new one.</a></h3>
+<% else %>
+    <% @plans.each do |plan| %>
+        <li><a href="plans/<%= plan.id %>"><%= plan.title %></a></li><>
+    <% end %>
 <% end %>
 </ul>
