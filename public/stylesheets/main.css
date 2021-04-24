@@ -45,6 +45,8 @@
   color: black;
 }
 
+
+
   .wrapper {
     background: #fff;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -54,6 +56,12 @@
     max-width: 960px;
     padding: 2.25%; /* 18px / 800px */
     width: 85%;
+  }
+
+  div#error {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 16px;
   }
 
   h1 {
