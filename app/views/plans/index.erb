@@ -5,7 +5,7 @@
     <h3>There is no lesson plan created yet. Let's <a href="/plans/new">create a new one.</a></h3>
 <% else %>
     <% @plans.each do |plan| %>
-        <li><a href="plans/<%= plan.id %>"><%= plan.title %></a></li><>
+        <li><a href="plans/<%= plan.id %>"><%= plan.title %></a></li>
     <% end %>
 <% end %>
 </ul>
