@@ -11,7 +11,7 @@ class TeachersController < ApplicationController
             redirect "/signup"
         end
         session[:teacher_id] = teacher.id 
-        flash[:success] = "User is succesfully created.Please log in to system."
+        flash[:success] = "User is succesfully created."
         redirect "/plans" 
     end
 
