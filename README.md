@@ -1,7 +1,7 @@
-# APPLAN
-Applan is a web app allowing teachers to create lesson plans, view their collections of lesson plans, edit and delete them.
+## APPLAN
+Applan is a web app allowing teachers to create lesson plans, view their collections of lesson plans, edit and delete them. Lesson plan template includes a title, objective, standards, descriptions and vocabulary. 
 
-# Installation
+### Installation
 * Clone this repo
 * Install all the gems via 
    ``` 
@@ -11,7 +11,7 @@ Applan is a web app allowing teachers to create lesson plans, view their collect
     ```
     rake db:migrate
    ```
- * (optional) Use seed data for pre_existing user login
+ * (optional) Use seed data for pre-existing users login or signup with new username and password. 
      ```
     rake db:seed
     ```
@@ -22,9 +22,9 @@ Applan is a web app allowing teachers to create lesson plans, view their collect
  * visit local host in your browser localhost:    
    http://localhost:9393/
 
-# Author(s)
+### Author(s)
 * Hatice Karatay ------ [GitHub -- Hatice Karatay](https://github.com/haticekaratay)
-# License 
+### License 
 [MIT](https://github.com/haticekaratay/applan/blob/master/LICENSE)
 
 
