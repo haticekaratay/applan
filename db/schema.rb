@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_18_022741) do
+ActiveRecord::Schema.define(version: 2021_04_28_172833) do
 
   create_table "plans", force: :cascade do |t|
     t.string "title"
-    t.text "objective", default: "N/A"
-    t.string "vocabulary", default: "N/A"
-    t.text "standard", default: "N/A"
+    t.text "objective"
+    t.string "vocabulary"
+    t.text "standard"
     t.text "description"
     t.integer "teacher_id"
     t.datetime "created_at", null: false
